@@ -5,6 +5,7 @@ const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
 
+const welcomePageRouter = require("./controllers/welcomePage");
 const booksRouter = require("./controllers/books");
 
 mongoose
@@ -17,6 +18,9 @@ mongoose
   });
 
 app.use(cors());
+
+app.use("/", welcomePageRouter);
+
 app.use(express.json());
 
 app.use("/api/books", booksRouter);
