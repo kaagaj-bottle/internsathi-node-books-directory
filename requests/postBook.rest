@@ -1,0 +1,12 @@
+POST http://localhost:3001/api/books
+Content-Type: application/json
+{
+    "title":"New Book",
+    "author":"Know One",
+    "price":123,
+    "publisher":"Unknown Publisher",
+    "description":"A book about unknown people",
+    "datePublished":"2022-09-27T08:48:39.177+00:00",
+    "genre":"Thriller",
+    "url":"www.unknown.com"
+}
