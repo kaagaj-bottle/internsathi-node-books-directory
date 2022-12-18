@@ -3,7 +3,7 @@ const welcomePageHtml = `<h2 id="api-reference">API Reference</h2>
 <pre><code class="lang-http">  <span class="hljs-meta">GET</span> /api/<span class="hljs-keyword">books</span>
 </code></pre>
 <h4 id="get-book">Get book</h4>
-<pre><code class="lang-http">  <span class="hljs-attribute">GET</span> /api/items/<span class="hljs-variable">"$"{id}</span>
+<pre><code class="lang-http">  <span class="hljs-attribute">GET</span> /api/items/<span class="hljs-symbol">$</span>{id}</span>
 </code></pre>
 <table>
 <thead>
@@ -40,7 +40,7 @@ const welcomePageHtml = `<h2 id="api-reference">API Reference</h2>
 </code></pre>
 <p>To update the book, and id must be provided. Along with that body must have the all information about the updated book.</p>
 <h4 id="delete-a-book">Delete a book</h4>
-<pre><code class="lang-http">  <span class="hljs-keyword">DELETE</span> <span class="hljs-regexp">/api/</span>books<span class="hljs-regexp">/"$"{id}'</span>
+<pre><code class="lang-http">  <span class="hljs-keyword">DELETE</span> <span class="hljs-regexp">/api/</span>books<span class="hljs-regexp">/<span class="hljs-symbol">$</span>{id}'</span>
 </code></pre>
 `;
 
