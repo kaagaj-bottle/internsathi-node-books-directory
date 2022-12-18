@@ -65,6 +65,7 @@ booksRouter.post("/", async (request, response) => {
     const savedBook = await newBook.save();
     response.json(savedBook);
   } catch (err) {
+    response.status(401).end("error saving book to database");
     logger.error(err);
   }
 });
