@@ -3,6 +3,7 @@ const logger = require("./utilities/logger");
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+const cors = require("cors");
 
 const booksRouter = require("./controllers/books");
 
@@ -15,6 +16,7 @@ mongoose
     logger.error("couldn't connect to the database: ", err);
   });
 
+app.use(cors());
 app.use(express.json());
 
 app.use("/api/books", booksRouter);
