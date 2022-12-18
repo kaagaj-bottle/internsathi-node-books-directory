@@ -1,12 +1,12 @@
-POST http://localhost:3001/api/books
-Content-Type: application/json
+POST http://localhost:3001/api/books HTTP/1.1
+content-type: application/json
 {
-    "title":"New Book",
-    "author":"Know One",
-    "price":123,
-    "publisher":"Unknown Publisher",
-    "description":"A book about unknown people",
-    "datePublished":"2022-09-27T08:48:39.177+00:00",
-    "genre":"Thriller",
-    "url":"www.unknown.com"
+    "title":"New Book 2",
+    "author":"Know One 2",
+    "price":1233,
+    "publisher":"Unknown Publisher 2",
+    "description":"A book about unknown people 2",
+    "datePublished":"2022-09-27T08:48:39.177+00:00 2",
+    "genre":"Thriller 2",
+    "url":"www.unknown.com 2"
 }
