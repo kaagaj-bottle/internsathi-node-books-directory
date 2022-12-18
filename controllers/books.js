@@ -134,4 +134,21 @@ booksRouter.put("/:id", async (request, response) => {
   }
 });
 
+//deletes a book as per given id
+booksRouter.delete("/:id", async (request, response) => {
+  const id = request.params.id;
+
+  if (!id) {
+    return response.end("Error: id parameter missing");
+  }
+
+  try {
+    await Book.findByIdAndDelete(id);
+    response.status(204).end();
+  } catch (err) {
+    logger.error(err);
+    response.status(204).end();
+  }
+});
+
 module.exports = booksRouter;
