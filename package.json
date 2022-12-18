@@ -4,7 +4,7 @@
   "description": "books directory with api links for GET, PUT, POST, and DELETE",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
+    "build": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Zishan Siddique",
