@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const mongooseSchema = new mongoose.Schema({
+const bookSchema = new mongoose.Schema({
   title: String,
   author: String,
   price: Number,
@@ -11,7 +11,7 @@ const mongooseSchema = new mongoose.Schema({
   url: String,
 });
 
-mongooseSchema.set("toJSON", {
+bookSchema.set("toJSON", {
   transform: (document, returnedObject) => {
     returnedObject.id = returnedObject._id.toString();
     delete returnedObject._id;
