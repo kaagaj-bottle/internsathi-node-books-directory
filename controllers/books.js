@@ -12,6 +12,17 @@ booksRouter.get("/", async (request, response) => {
   }
 });
 
+booksRouter.get("/:id", async (request, response) => {
+  const id = request.params.id;
+
+  try {
+    const book = await Book.findById(id);
+    response.json(book);
+  } catch (err) {
+    logger.error(err);
+  }
+});
+
 booksRouter.post("/", async (request, response) => {
   const {
     title,
